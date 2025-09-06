@@ -83,7 +83,7 @@ app.get("/", (req, res) => res.send("API running"));
 app.use("/api/auth", authRoutes);
 app.use("/api/games", gameRoutes);
 
-// export default app;
+export default app;
 
 //do not use app.listen() in vercel
-module.exports = app
+// module.exports = app
