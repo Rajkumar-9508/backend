@@ -52,10 +52,10 @@ app.use((req, res, next) => {
   next();
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-});
+// const PORT = process.env.PORT || 5000;
+// app.listen(PORT, () => {
+//   console.log(`🚀 Server running on http://localhost:${PORT}`);
+// });
 
 
 // Sessions (JWT ke bina)
@@ -83,7 +83,7 @@ app.get("/", (req, res) => res.send("API running"));
 app.use("/api/auth", authRoutes);
 app.use("/api/games", gameRoutes);
 
-export default app;
+// export default app;
 
 //do not use app.listen() in vercel
-// module.exports = app
+module.exports = app
